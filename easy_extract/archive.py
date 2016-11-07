@@ -1,7 +1,7 @@
 """Archive collection modules"""
 import os
 
-CHAR_TO_ESCAPE = (' ', '(', ')', '*', "'", '"', '&')
+CHAR_TO_ESCAPE = ('(', ')', '*', "'", '"', '&')
 
 
 class BaseFileCollection(object):

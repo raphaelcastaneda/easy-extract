@@ -18,11 +18,11 @@ class HJSplitArchive(Archive):
 
         print 'Extracting %s...' % new_filename
 
-        os.system('cat %s > %s' % (first_archive, new_filename))
+        os.system('cat "%s" > "%s"' % (first_archive, new_filename))
 
         for archive in self.archives[1:]:
             archive = self.get_command_filename(archive)
-            os.system('cat %s >> %s' % (archive, new_filename))
+            os.system('cat "%s" >> "%s"' % (archive, new_filename))
 
         return True
 

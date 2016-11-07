@@ -18,7 +18,7 @@ class MediaArchive(Archive):
 
     def _extract(self):
         first_archive = self.get_command_filename(self.archives[0])
-        return not os.system('synoindex -a %s' % first_archive)
+        return not os.system('synoindex -a "%s"' % first_archive)
 
     def remove(self):
         pass
